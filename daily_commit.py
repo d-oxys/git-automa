@@ -36,3 +36,13 @@ for i in range(4):
 # Tulis jumlah commit ke README.md
 with open(os.path.join(repo_dir, 'README.md'), 'a') as fp:
     fp.write("\nTotal commits today: " + str(commit_count) + "\n")
+
+# Menambahkan semua perubahan
+repo.git.add('--all')
+
+# Melakukan commit
+repo.index.commit("Updated README")
+
+# Melakukan push
+origin = repo.remote(name='origin')
+origin.push()
