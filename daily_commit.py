@@ -3,7 +3,7 @@ from datetime import datetime
 import os
 
 # Lokasi direktori repo Anda
-repo_dir = "/path/to/your/repo"
+repo_dir = "C:/Users/crimson_net/Documents/kodingan/python/git-automa"
 repo = Repo(repo_dir)
 
 # Membuat file dengan timestamp
