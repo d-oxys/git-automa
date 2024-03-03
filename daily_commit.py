@@ -9,6 +9,8 @@ repo = Repo(repo_dir)
 
 file_names = ['file1.txt', 'file2.txt', 'file3.txt', 'file4.txt']
 
+commit_count = 0
+
 for i in range(4):
     # Membuat file dengan timestamp
     file_name = os.path.join(repo_dir, file_names[i])
@@ -27,3 +29,10 @@ for i in range(4):
 
     # Tunggu selama 5 detik sebelum commit berikutnya
     time.sleep(5)
+
+    # Tambahkan jumlah commit
+    commit_count += 1
+
+# Tulis jumlah commit ke README.md
+with open(os.path.join(repo_dir, 'README.md'), 'a') as fp:
+    fp.write("\nTotal commits today: " + str(commit_count) + "\n")
