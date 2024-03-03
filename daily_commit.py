@@ -34,9 +34,8 @@ for i in range(4):
     commit_count += 1
 
 # Tulis jumlah commit ke README.md
-with open(os.path.join(repo_dir, 'README.md'), 'a') as fp:
-    fp.write("\nTotal commits today: " + str(commit_count) + "\n")
-
+with open(os.path.join(repo_dir, 'README.md'), 'w') as fp:
+    fp.write("Total commits on " + str(datetime.now().date()) + ": " + str(commit_count) + "\n")
 # Menambahkan semua perubahan
 repo.git.add('--all')
 
